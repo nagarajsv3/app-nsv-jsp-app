@@ -14,7 +14,7 @@
 <a href="logout" name="logout" onclick="logout">Logout</a>
 <fieldset style="width:300px">
     <legend>Registration</legend>
-    <form method="post" action="registrationProcessor.jsp">
+    <form method="post" action="/register">
         <table>
             <tr>
                 <td>name</td>

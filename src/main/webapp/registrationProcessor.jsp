@@ -13,8 +13,14 @@
     <title>Title</title>
 </head>
 <body>
+
+<jsp:useBean id="customer" class="com.nsv.jsmbaba.domain.Customer"/>
+<jsp:setProperty name="customer" property="*"/>
+<jsp:getProperty name="customer" property="name"/>
+<br/>
 <%
     CustomerService service = new CustomerService();
+/*
     Customer customer = new Customer();
     customer.setName(request.getParameter("name"));
     customer.setStreet(request.getParameter("street"));
@@ -22,6 +28,7 @@
     customer.setState(request.getParameter("state"));
     customer.setCountry(request.getParameter("country"));
     customer.setZipCode(request.getParameter("zipcode"));
+*/
     int noOfRowsUpdated = service.createCustomer(customer);
     if(noOfRowsUpdated > 0){
         out.println("Customer "+customer.getName()+" is created"+"\n"+customer.toString());
