@@ -12,6 +12,6 @@
 </head>
 <body>
     ${requestScope.test}
-    ${requestScope.cust.name}
+    ${requestScope.cust.name} <span>is created</span>
 </body>
 </html>
