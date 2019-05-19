@@ -24,23 +24,9 @@ public class SearchServlet extends HttpServlet {
             customers = service.searchCustomersByState(city);
         }
 
+        req.setAttribute("customers",customers);
+        req.getRequestDispatcher("searchExpResults.jsp").forward(req,resp);
 
 
-        StringBuffer buffer = new StringBuffer();
-        buffer.append("<table border=1>");
-        buffer.append("<tr><td>customerId</td><td>name</td><td>street</td><td>city</td><td>state</td><td>country</td><td>zipcode</td></tr>");
-        for (Customer customer: customers) {
-            buffer.append("<tr>");
-            buffer.append("<td>").append(customer.getCustomerId()).append("</td>");
-            buffer.append("<td>").append(customer.getName()).append("</td>");
-            buffer.append("<td>").append(customer.getStreet()).append("</td>");
-            buffer.append("<td>").append(customer.getCity()).append("</td>");
-            buffer.append("<td>").append(customer.getState()).append("</td>");
-            buffer.append("<td>").append(customer.getCountry()).append("</td>");
-            buffer.append("<td>").append(customer.getZipCode()).append("</td>");
-            buffer.append("</tr>");
-        }
-        buffer.append("</table>");
-        resp.getWriter().print(buffer.toString());
     }
 }

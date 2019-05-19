@@ -13,4 +13,20 @@
     <servlet-name>registrationServlet</servlet-name>
     <url-pattern>/register</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>searchServlet</servlet-name>
+    <servlet-class>com.nsv.jsmbaba.servlets.SearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>searchServlet</servlet-name>
+    <url-pattern>/search</url-pattern>
+  </servlet-mapping>
+
+  <jsp-config>
+    <taglib>
+      <taglib-uri>https://journaldev.com/jsp/tlds/mytags</taglib-uri>
+      <taglib-location>/WEB-INF/SubString.tld</taglib-location>
+    </taglib>
+  </jsp-config>
 </web-app>

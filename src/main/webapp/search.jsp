@@ -12,7 +12,7 @@
 </head>
 <body>
 <h2>Customer Search By City/State</h2>
-<form method="post" action="searchResults.jsp">
+<form method="post" action="/search">
     <table>
         <tr>
             <td>Enter the city/state to search for</td>
@@ -20,7 +20,7 @@
         </tr>
     </table>
     <input type="submit" value="SearchByCity" name="action">
-    <input type="submit" value="SearchByState" name="action">
+    <%--<input type="submit" value="SearchByState" name="action">--%>
 </form>
 
 </body>
